@@ -12,12 +12,12 @@
     <nav class="sidebar">
         <div class="sidebar-header"><h1 class="sidebar-brand">ElastiCrew</h1></div>
         <ul class="nav-menu">
-            <li class="nav-menu-item active"><a href="#"><span>Candidates</span></a></li>
-            <li class="nav-menu-item"><a href="#"><span>Assessments</span></a></li>
-            <li class="nav-menu-item"><a href="#"><span>Reports</span></a></li>
-            <li class="nav-menu-item"><a href="#"><span>Dashboard</span></a></li>
-            <li class="nav-menu-item"><a href="#"><span>Departments</span></a></li>
-            <li class="nav-menu-item"><a href="#"><span>Settings</span></a></li>
+            <li class="nav-menu-item active"><a href="candidates.html"><span>Candidates</span></a></li>
+            <li class="nav-menu-item"><a href="assessments.html"><span>Assessments</span></a></li>
+            <li class="nav-menu-item"><a href="reports.html"><span>Reports</span></a></li>
+            <li class="nav-menu-item"><a href="dashboard.html"><span>Dashboard</span></a></li>
+            <li class="nav-menu-item"><a href="departments.html"><span>Departments</span></a></li>
+            <li class="nav-menu-item"><a href="settings.html"><span>Settings</span></a></li>
         </ul>
         <div class="logout-container"><a href="#" class="logout-link"><span>Logout</span></a></div>
     </nav>
@@ -56,9 +56,16 @@
                     </select>
                     <select id="filterStage" class="filter-select">
                         <option value="all">All Stages</option>
-                        <option value="Screening">Screening</option>
-                        <option value="Shortlisted">Shortlisted</option>
-                        <option value="Interviewing">Interviewing</option>
+                        <option value="Screening">Screening Pending</option>
+                        <option value="Screening">Screening Completed</option>
+                        <option value="Screening">MCQ Assessment Pending</option>
+                        <option value="Screening">MCQ Assessment Completed</option>
+                        <option value="Screening">Tech Interview Pending</option>
+                        <option value="Screening">Tech Interview Completed</option>
+                        <option value="Screening">Hr Interview Pending</option>
+                        <option value="Screening">Hr Interview Completed</option>
+                        <option value="Screening">Report Generated</option>
+                        
                     </select>
                 </div>
             </div>
@@ -84,7 +91,7 @@
         <span>MCQ Assessment</span>
     </a>
     
-    <a href="#" class="sub-nav-tab text-decoration-none">
+    <a href="tech-scheduler.html" class="sub-nav-tab text-decoration-none">
         <svg class="tab-icon icon-green" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect></svg>
         <span>Tech Scheduler</span>
     </a>
@@ -108,15 +115,15 @@
                     </tr>
                 </thead>
                 <tbody id="candidateListBody">
-                    <tr class="candidate-row" data-id="EC-2026-001" data-name="John Doe" data-dept="Engineering" data-subdept="Full Stack" data-stage="Shortlisted">
+                    <tr class="candidate-row" data-id="EC-2026-001" data-name="Achyut Pancholi" data-dept="Engineering" data-subdept="Full Stack" data-stage="Video Bot Screening Completed">
                         <td><span class="id-badge">EC-2026-001</span></td>
-                        <td><strong>John Doe</strong></td>
+                        <td><strong>Achyut Pancholi</strong></td>
                         <td>Full Stack</td>
-                        <td><span class="stage-tag shortlisted">Shortlisted</span></td>
-                        <td><span class="resume-tag">📄 john_doe_resume.pdf</span></td>
+                        <td><span class="stage-tag shortlisted">Screening Completed</span></td>
+                        <td><span class="resume-tag">📄 Achyut_resume.pdf</span></td>
                         <td style="text-align: right;">
                             <select class="action-dropdown" onchange="handleAction(this)">
-                                <option value="" disabled selected>Manage Actions</option>
+                                <option value="" disabled selected>Manage</option>
                                 <option value="video">Send Video Bot Invite</option>
                                 <option value="mcq">Send MCQ Assessment Invite</option>
                                 <option value="tech">Send Technical Interview Invite</option>

@@ -480,3 +480,39 @@ body {
     display: inline-block;
     box-sizing: border-box;
 }
+
+/* --- CONTAINER SCROLL & SCREEN EDGE BUFFER CORRECTIONS --- */
+
+/* 1. Force a strict safety margin on the main canvas so it never hits the page end */
+.main-content {
+    flex: 1;
+    background-color: var(--bg-main);
+    padding: 32px 40px !important; /* Generous 40px padding buffer on the right/left */
+    overflow-y: auto;
+    color: var(--text-main);
+    box-sizing: border-box;
+}
+
+/* 2. Add an inner protective scroll-wrapper class around your HTML <table> element */
+.table-responsive-wrapper {
+    width: 100%;
+    overflow-x: auto; /* Gracefully scroll horizontally if table columns exceed container box */
+    margin-top: 16px;
+    border-radius: 4px;
+}
+
+/* 3. Retain our strict pixel rules for the Manage cell to keep it locked down */
+.col-manage, .col-action {
+    width: 130px !important;
+    min-width: 130px !important;
+    max-width: 130px !important;
+    text-align: right;
+    padding-right: 20px !important; /* Extra inner padding to pull the dropdown away from the line */
+}
+
+.action-dropdown {
+    width: 110px !important;
+    min-width: 110px !important;
+    max-width: 110px !important;
+    box-sizing: border-box;
+}

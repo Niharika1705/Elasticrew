@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elasticrew - Evaluation Reports</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .grid-layout-th, .grid-layout-td { padding: 14px 16px; text-align: left; vertical-align: middle; }
+        .col-name { width: 30%; }
+        .col-dept { width: 25%; }
+        .col-score { width: 25%; }
+        .col-manage { width: 20%; text-align: right; }
+
+        /* Report Modal Layout Overrides for Media Intricacy */
+        .report-modal-card { max-width: 960px; width: 90%; max-height: 85vh; overflow-y: auto; }
+        .report-grid-dashboard { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 16px; }
+        .media-block { background: #f8fafc; border: 1px solid var(--border-subtle); border-radius: 8px; padding: 16px; }
+        .media-title { font-size: 14px; font-weight: 700; color: var(--text-dark); margin-bottom: 10px; display: flex; align-items: center; gap: 6px; }
+        .transcript-box { background: #ffffff; border: 1px solid var(--border-subtle); border-radius: 6px; height: 120px; overflow-y: auto; padding: 10px; font-size: 12px; line-height: 1.5; color: var(--text-main); }
+        .editor-mock-container { background: #1e1e1e; color: #d4d4d4; font-family: 'Courier New', monospace; padding: 12px; border-radius: 6px; height: 150px; overflow-y: auto; font-size: 12px; }
+        
+        .link-success-banner { background-color: #dcfce7; border: 1px solid #bbf7d0; color: #15803d; padding: 12px; border-radius: 6px; margin-top: 16px; font-size: 13px; display: none; word-break: break-all; }
+    </style>
+</head>
+<body>
+
+    <nav class="sidebar">
+        <div class="sidebar-header"><h1 class="sidebar-brand">ElastiCrew</h1></div>
+        <ul class="nav-menu">
+      <li class="nav-menu-item active"><a href="candidates.html"><span>Candidates</span></a></li>
+            <li class="nav-menu-item"><a href="assessments.html"><span>Assessments</span></a></li>
+            <li class="nav-menu-item"><a href="reports.html"><span>Reports</span></a></li>
+            <li class="nav-menu-item"><a href="dashboard.html"><span>Dashboard</span></a></li>
+            <li class="nav-menu-item"><a href="departments.html"><span>Departments</span></a></li>
+            <li class="nav-menu-item"><a href="settings.html"><span>Settings</span></a></li>
+        </ul>
+        <div class="logout-container"><a href="#" class="logout-link"><span>Logout</span></a></div>
+    </nav>
+
+    <main class="main-content">
+        <header class="header-actions">
+            <h1 class="page-title">Candidate Evaluation Reports</h1>
+        </header>
+
+        <section class="candidates-section">
+            <div class="filter-bar">
+                <div class="search-box" style="max-width: 360px;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    <input type="text" id="searchReport" placeholder="Search finalized profiles...">
+                </div>
+            </div>
+
+            <div class="table-responsive-wrapper">
+                <table class="candidate-table" style="table-layout: fixed; width: 100%;">
+                    <thead>
+                        <tr>
+                            <th class="grid-layout-th col-name">Candidate Finalized</th>
+                            <th class="grid-layout-th col-dept">Sub Dept Track</th>
+                            <th class="grid-layout-th col-score">Overall Index Match</th>
+                            <th class="grid-layout-th col-manage" style="padding-right: 24px;">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="reportsListBody">
+                        <tr class="candidate-row" data-name="Grace Hopper" data-dept="Engineering" data-subdept="Full Stack" data-id="EC-9931">
+                            <td class="grid-layout-td col-name"><strong>Grace Hopper</strong></td>
+                            <td class="grid-layout-td col-dept">Full Stack</td>
+                            <td class="grid-layout-td col-score"><span class="stage-tag offered" style="font-family: monospace;">94% Match</span></td>
+                            <td class="grid-layout-td col-manage">
+                                <button class="btn-secondary" style="padding: 6px 12px; font-size: var(--font-size-small); color: var(--primary-blue);" onclick="triggerReportModal('Grace Hopper', 'Full Stack', 'EC-9931')">Review Report</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <div class="modal-overlay" id="reportModalOverlay">
+        <div class="modal-card report-modal-card">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 1px solid var(--border-subtle); padding-bottom: 14px;">
+                <div>
+                    <h2 class="modal-header" id="targetModalCandName" style="margin-bottom: 4px;">Candidate Dossier</h2>
+                    <p style="font-size: 13px; color: var(--text-muted);" id="targetModalCandMeta">Track: Full Stack</p>
+                </div>
+                <div style="display: flex; gap: 10px;">
+                    <button class="btn-submit" style="background-color: #7c3aed;" onclick="generateSecureClientLink()">🔗 Generate 24H Client Link</button>
+                    <button class="btn-secondary" onclick="closeReportModal()">Close Preview</button>
+                </div>
+            </div>
+
+            <div class="link-success-banner" id="linkSuccessBanner"></div>
+
+            <div class="report-grid-dashboard">
+                
+                <div class="media-block">
+                    <h4 class="media-title">📄 Fabricated Resume Profile</h4>
+                    <div style="background: #ffffff; border: 1px solid var(--border-subtle); border-radius: 6px; padding: 14px; font-size: 12.5px;">
+                        <p><strong>Core Stack:</strong> React, Node.js, Express, MongoDB, Python</p><br>
+                        <p><strong>Experience Summary:</strong> 4+ years of professional development building optimized microservices architectures and responsive client view interfaces.</p>
+                    </div>
+                </div>
+
+                <div class="media-block">
+                    <h4 class="media-title">🤖 Video Bot AI Screening Assessment</h4>
+                    <video controls style="width: 100%; border-radius: 6px; background: #000; height: 140px;" poster="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=500&auto=format&fit=crop&q=60">
+                        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                    </video>
+                    <div style="margin-top: 10px; font-size:12px; color: var(--text-main); font-weight: 500; margin-bottom: 6px;">AI Evaluation Summary:</div>
+                    <div class="transcript-box">
+                        <strong>[00:12] AI Bot:</strong> "Can you expand on how you resolve CORS constraints natively?"<br>
+                        <strong>[00:28] Candidate:</strong> "I handle CORS constraints explicitly by configuring whitelist arrays inside the middleware layer or modifying structural header policies directly in Express configuration files safely..."
+                    </div>
+                </div>
+
+                <div class="media-block">
+                    <h4 class="media-title">👥 Technical Panel Interview Recording</h4>
+                    <video controls style="width: 100%; border-radius: 6px; background: #000; height: 140px;" poster="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=500&auto=format&fit=crop&q=60">
+                        <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
+                    </video>
+                    <div style="margin-top: 10px; font-size:12px; color: var(--text-main); font-weight: 500; margin-bottom: 6px;">Panel Transcript & Technical Synthesis:</div>
+                    <div class="transcript-box">
+                        <strong>[14:05] Panellist (Sarah):</strong> "Walk me through how your algorithmic map manages big O execution steps here."<br>
+                        <strong>[15:22] Candidate:</strong> "By storing lookup markers inside a Hash Map data structure context object, I successfully reduce lookup time complexity down to constant time operation boundaries..."
+                    </div>
+                </div>
+
+                <div class="media-block">
+                    <h4 class="media-title">💻 Code Submitted (KL Editor Terminal)</h4>
+                    <div class="editor-mock-container">
+<span style="color: #6a9955;">// KL Editor v4.2 - Production Technical Submission</span>
+<span style="color: #569cd6;">const</span> <span style="color: #4fc1ff;">optimizeCandidateRoute</span> = (<span style="color: #9cdcfe;">matrix</span>) => {
+    <span style="color: #569cd6;">const</span> <span style="color: #9cdcfe;">tracker</span> = <span style="color: #569cd6;">new</span> <span style="color: #4ec9b0;">Map</span>();
+    <span style="color: #c586c0;">for</span>(<span style="color: #569cd6;">let</span> <span style="color: #9cdcfe;">i</span> = <span style="color: #b5cea8;">0</span>; <span style="color: #9cdcfe;">i</span> < <span style="color: #9cdcfe;">matrix</span>.<span style="color: #9cdcfe;">length</span>; <span style="color: #9cdcfe;">i</span>++) {
+        <span style="color: #9cdcfe;">tracker</span>.<span style="color: #9cdcfe;">set</span>(<span style="color: #9cdcfe;">matrix</span>[<span style="color: #9cdcfe;">i</span>].<span style="color: #9cdcfe;">id</span>, <span style="color: #9cdcfe;">matrix</span>[<span style="color: #9cdcfe;">i</span>]);
+    }
+    <span style="color: #c586c0;">return</span> <span style="color: #4ec9b0;">Array</span>.<span style="color: #569cd6;">from</span>(<span style="color: #9cdcfe;">tracker</span>.<span style="color: #9cdcfe;">values</span>());
+};
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const reportModalOverlay = document.getElementById('reportModalOverlay');
+        const targetModalCandName = document.getElementById('targetModalCandName');
+        const targetModalCandMeta = document.getElementById('targetModalCandMeta');
+        const linkSuccessBanner = document.getElementById('linkSuccessBanner');
+        let currentActiveCandId = '';
+
+        function triggerReportModal(name, track, id) {
+            currentActiveCandId = id;
+            targetModalCandName.innerText = `Evaluation Report: ${name}`;
+            targetModalCandMeta.innerText = `Track Track: ${track} | Database Reference Token: ${id}`;
+            linkSuccessBanner.style.display = 'none'; // Clear banner view states upon opening
+            reportModalOverlay.classList.add('active');
+        }
+
+        function closeReportModal() {
+            reportModalOverlay.classList.remove('active');
+        }
+
+        // 24-HOUR SECURE EXPIRY CRYPTOGRAPHIC LINK SIMULATOR RULES
+        function generateSecureClientLink() {
+            // Generating custom crypto hashing key string blocks
+            const deterministicToken = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+            
+            // Build absolute custom target token address url
+            const secureAccessUrl = `${window.location.origin}/client-report.html?access_token=ec_secure_${deterministicToken}&valid_until=1726053600`;
+
+            linkSuccessBanner.innerHTML = `<strong>Secure Shareable Link Generated Natively!</strong><br>This secure unique URL matches strict client-view constraints and automatically expires in exactly 24 hours. Copy link to clipboard:<br><input type="text" value="${secureAccessUrl}" readonly style="width:100%; margin-top:8px; padding:6px; font-family:monospace; border:1px solid #bbf7d0; border-radius:4px; font-size:11px;" onclick="this.select()">`;
+            linkSuccessBanner.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
