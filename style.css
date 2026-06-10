@@ -3,7 +3,7 @@
 
 /* --- EXTENDED GLOBAL TOKENS (PREMIUM) --- */
 :root {
-    --sidebar-bg: linear-gradient(145deg, #05102a 0%, #0E2D7B 100%);
+    --sidebar-bg: #0E2D7B;
     --navy-active-pill: rgba(255, 255, 255, 0.15);
     --orange-badge: #f59e0b;
     --text-active: #ffffff;
@@ -14,11 +14,13 @@
     --text-dark: #0f172a;
     --text-main: #334155;
     --text-muted: #64748b;
+    --card-bg: #ffffff;
+
     --primary-blue: #0E2D7B;
     --primary-blue-hover: #0A215E;
     
-    --gradient-primary: linear-gradient(135deg, #1A4AA8 0%, #0E2D7B 100%);
-    --gradient-primary-hover: linear-gradient(135deg, #143A82 0%, #0A215E 100%);
+    --gradient-primary: #0E2D7B;
+    --gradient-primary-hover: #0A215E;
 
     --font-size-brand: 24px;
     --font-size-nav: 15px;
@@ -64,9 +66,7 @@ body {
     font-size: 21px; 
     font-weight: 900; 
     letter-spacing: -0.5px; 
-    background: linear-gradient(135deg, #ffffff 0%, #e0f2fe 50%, #7dd3fc 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #ffffff;
     text-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     text-transform: uppercase;
 }
@@ -82,9 +82,9 @@ body {
     transform: translateY(-50%); 
     height: 60%;
     width: 4px; 
-    background: linear-gradient(to bottom, #a78bfa, #c084fc); 
+    background: #ffffff; 
     border-radius: 0 4px 4px 0;
-    box-shadow: 2px 0 8px rgba(192, 132, 252, 0.5);
+    box-shadow: 2px 0 8px rgba(255, 255, 255, 0.5);
 }
 
 .nav-menu-item a { 
@@ -467,8 +467,8 @@ body {
     box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
 }
 
-.btn-submit.dispatch-btn { background: linear-gradient(135deg, #10b981 0%, #059669 100%); box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2); }
-.btn-submit.dispatch-btn:hover { background: linear-gradient(135deg, #059669 0%, #047857 100%); box-shadow: 0 6px 16px rgba(16, 185, 129, 0.3); }
+.btn-submit.dispatch-btn { background: #10b981; box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2); }
+.btn-submit.dispatch-btn:hover { background: #059669; box-shadow: 0 6px 16px rgba(16, 185, 129, 0.3); }
 
 .form-control[readonly] { background-color: #f1f5f9; color: #64748b; cursor: not-allowed; font-weight: 600; border-color: #e2e8f0; }
 
