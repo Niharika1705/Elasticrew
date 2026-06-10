@@ -240,8 +240,27 @@
             border-color: #2563eb;
             outline: none;
         }
+    
+        .checkbox-dropdown-panel { border: 1px solid #cbd5e1; border-radius: 6px; max-height: 120px; overflow-y: auto; padding: 8px 12px; background-color: #ffffff; }
+        .checkbox-item { display: flex; align-items: center; gap: 8px; padding: 4px 0; font-size: 13px; color: #334155; cursor: pointer; }
+        .dropdown-wrapper:hover .dropdown-menu { display: block !important; }
+        .dropdown-menu a:hover { background-color: #f1f5f9; }
+</style>
+
+    <style>
+        .enterprise-table td strong {
+            white-space: normal !important;
+            max-width: none !important;
+            line-height: 1.3;
+        }
+        .enterprise-table td {
+            vertical-align: middle !important;
+            padding-top: 12px !important;
+            padding-bottom: 12px !important;
+        }
     </style>
 </head>
+
 
 <body>
 
@@ -264,29 +283,35 @@
 
     <!-- MAIN FRAME CONTENT AREA -->
     <main class="main-content" style="padding: 24px 40px !important;">
-        <div style="font-size: 11px; font-weight: 800; color: #94a3b8; text-transform: uppercase; margin-bottom: 8px; letter-spacing: 0.8px;">Pipeline Stages</div>
+        <div
+            style="font-size: 11px; font-weight: 800; color: #94a3b8; text-transform: uppercase; margin-bottom: 8px; letter-spacing: 0.8px;">
+            Pipeline Stages</div>
         <div class="sub-nav-container" style="margin-bottom: 20px;">
             <a href="hiring-pipeline.html?v=3" class="sub-nav-tab active text-decoration-none">
-                <svg class="tab-icon icon-purple" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <svg class="tab-icon icon-purple" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2">
                     <path d="M23 7l-7 5 7 5V7z"></path>
                     <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
                 </svg>
                 <span>Video Screening</span>
             </a>
             <a href="#" class="sub-nav-tab text-decoration-none">
-                <svg class="tab-icon icon-blue-alt" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <svg class="tab-icon icon-blue-alt" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2">
                     <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
                 </svg>
                 <span>MCQ Assessment</span>
             </a>
             <a href="tech-scheduler.html?v=3" class="sub-nav-tab text-decoration-none">
-                <svg class="tab-icon icon-green" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <svg class="tab-icon icon-green" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2">
                     <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
                 </svg>
                 <span>Tech Scheduler</span>
             </a>
             <a href="#" class="sub-nav-tab text-decoration-none">
-                <svg class="tab-icon icon-amber" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <svg class="tab-icon icon-amber" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2">
                     <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
                 </svg>
                 <span>HR Interview</span>
@@ -295,84 +320,91 @@
 
         <header class="header-actions" style="margin-bottom: 16px;">
             <div>
-                <h1 class="page-title">Video Screening</h1>
-                <p style="color: #64748b; font-size: 14px; margin-top: 6px;">Review candidate screening results and move qualified candidates forward.</p>
+                <h1 class="page-title">Video Screening Operations Workspace</h1>
+                <p style="color: #64748b; font-size: 14px; margin-top: 6px;">Review candidate screening results and move
+                    qualified candidates forward.</p>
             </div>
-            <div style="display:flex; gap: 12px; align-items: center;">
-                <button class="btn-secondary">Export CSV</button>
-                <button class="btn-secondary">Bulk Actions</button>
-                <button class="btn-secondary">Refresh</button>
+            <div style="display:flex; align-items:center;">
+                <button class="btn-primary" style="background-color: var(--primary-blue); color: white; border: none; padding: 10px 20px; border-radius: 6px; font-weight: 600; cursor: pointer;">+ Send Screening Invite</button>
             </div>
         </header>
 
         <!-- Action-Oriented KPI Panel -->
         <section class="kpi-panel-container" style="margin-bottom: 20px;">
             <div class="kpi-card warning">
-                <div class="kpi-label">Pending Review</div>
+                <div class="kpi-label">Pending Completion</div>
                 <div class="kpi-count">12</div>
             </div>
             <div class="kpi-card success">
-                <div class="kpi-label">Ready For Assessment</div>
+                <div class="kpi-label">Ready For Next Stage</div>
                 <div class="kpi-count">5</div>
             </div>
             <div class="kpi-card danger">
-                <div class="kpi-label">Review Overdue</div>
+                <div class="kpi-label">Expired Invites</div>
                 <div class="kpi-count">3</div>
             </div>
             <div class="kpi-card neutral" style="border-left-color: #64748b;">
-                <div class="kpi-label">Expired Screenings</div>
+                <div class="kpi-label">On Hold</div>
                 <div class="kpi-count">2</div>
             </div>
         </section>
 
         <!-- Pipeline Stages Label -->
-        
+
 
         <!-- Enterprise Filter Bar -->
         <section class="enterprise-filter-bar" style="margin-bottom: 20px; display:flex; gap:12px; align-items:center;">
-            <select class="filter-select" style="min-width: 150px; padding: 8px 12px; font-size: 13px; border-radius: 6px; border: 1px solid #cbd5e1;">
+            <select class="filter-select"
+                style="min-width: 150px; padding: 8px 12px; font-size: 13px; border-radius: 6px; border: 1px solid #cbd5e1;">
                 <option>All Departments</option>
                 <option>Engineering</option>
                 <option>Product</option>
             </select>
-            <select class="filter-select" style="min-width: 150px; padding: 8px 12px; font-size: 13px; border-radius: 6px; border: 1px solid #cbd5e1;">
-                <option>All Recruiters</option>
-                <option>Priya Sharma</option>
-                <option>Ravi Patel</option>
-            </select>
-            <select class="filter-select" style="min-width: 150px; padding: 8px 12px; font-size: 13px; border-radius: 6px; border: 1px solid #cbd5e1;">
+            
+            <select class="filter-select"
+                style="min-width: 150px; padding: 8px 12px; font-size: 13px; border-radius: 6px; border: 1px solid #cbd5e1;">
                 <option>All Statuses</option>
                 <option>Pending Review</option>
                 <option>Review Completed</option>
                 <option>On Hold</option>
                 <option>Rejected</option>
             </select>
-            <input type="date" class="filter-select" style="min-width: 150px; padding: 8px 12px; font-size: 13px; border-radius: 6px; border: 1px solid #cbd5e1; color:#64748b;" title="Start Date">
-            <input type="date" class="filter-select" style="min-width: 150px; padding: 8px 12px; font-size: 13px; border-radius: 6px; border: 1px solid #cbd5e1; color:#64748b;" title="End Date">
-            <button class="add-filter-btn" style="padding: 8px 16px; border-color: var(--primary-blue); background: var(--primary-blue); color: #fff;">Apply Filters</button>
+            <select class="filter-select" style="min-width: 150px; padding: 8px 12px; font-size: 13px; border-radius: 6px; border: 1px solid #cbd5e1;">
+                <option>All Dates</option>
+                <option>Last 7 Days</option>
+                <option>Last 30 Days</option>
+                <option>This Quarter</option>
+            </select>
+            <button class="add-filter-btn"
+                style="padding: 8px 16px; border-color: var(--primary-blue); background: var(--primary-blue); color: #fff;">Apply
+                Filters</button>
         </section>
 
         <!-- Enterprise Data Grid -->
         <section class="candidates-section">
+            
+            <div style="margin-top: 30px; margin-bottom: 12px;">
+                <h2 style="font-size: 16px; font-weight: 700; color: #0f172a; margin: 0;">Pending Action Queue</h2>
+                <p style="font-size: 13px; color: #64748b; margin-top: 4px; margin-bottom: 0;">Candidates awaiting your review or reminder.</p>
+            </div>
             <div class="table-responsive-wrapper">
-                <table class="candidate-table enterprise-table" style="table-layout: fixed; width: 100%;">
+                <table class="candidate-table enterprise-table" style="width: 100%;">
+                    
                     <thead>
                         <tr>
-                            <th style="width: 40px; text-align: center;"><input type="checkbox"></th>
-                            <th style="width: 20%;">Candidate</th>
-                            <th style="width: 14%;">Role</th>
-                            <th style="width: 12%;">Stage</th>
-                            <th style="width: 14%;">Submitted On</th>
-                            <th style="width: 14%;">Review Status</th>
-                            <th style="width: 14%;">Next Action</th>
-                            <th style="width: 12%; text-align: right; padding-right: 20px;">Actions</th>
+                            
+                            <th>Candidate</th>
+                            <th>Role</th>
+                            <th>Invited On</th>
+                            <th>Submitted On</th>
+                            <th>Recommended Action</th>
+                            <th style="text-align: right; padding-right: 20px;">Actions</th>
                         </tr>
                     </thead>
-                    
                     <!-- Row 1 -->
                     <tbody class="candidate-row-group">
                         <tr class="enterprise-row">
-                            <td style="text-align: center; vertical-align: middle;"><input type="checkbox"></td>
+                            
                             <td>
                                 <div style="display: flex; align-items: center; gap: 10px;">
                                     <div class="avatar-circle">AT</div>
@@ -380,71 +412,26 @@
                                 </div>
                             </td>
                             <td>Backend Eng</td>
-                            <td>Video Screen</td>
-                            <td><div class="timestamp-txt" style="color:#1e293b;">08 Jun 2026</div></td>
-                            <td><span class="status-badge pending">Pending Review</span></td>
-                            <td><strong style="color:var(--primary-blue);">Review Screening</strong></td>
-                            <td style="text-align: right; padding-right: 20px;">
-                                <div style="display: flex; justify-content: flex-end; gap: 6px;">
-                                    <button class="btn-primary-action">Review Candidate</button>
-                                    <button class="btn-primary-action" style="padding: 6px 10px; color: #64748b; background:#f1f5f9;">&#8942;</button>
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-
-                    <!-- Row 2 -->
-                    <tbody class="candidate-row-group">
-                        <tr class="enterprise-row">
-                            <td style="text-align: center; vertical-align: middle;"><input type="checkbox"></td>
+                            <td><div class="timestamp-txt" style="color:#64748b;">06 Jun 2026</div></td>
                             <td>
-                                <div style="display: flex; align-items: center; gap: 10px;">
-                                    <div class="avatar-circle">GH</div>
-                                    <div><strong>Grace Hopper</strong></div>
-                                </div>
+                                <div class="timestamp-txt" style="color:#1e293b;">08 Jun 2026</div>
                             </td>
-                            <td>Full Stack</td>
-                            <td>Video Screen</td>
-                            <td><div class="timestamp-txt" style="color:#1e293b;">07 Jun 2026</div></td>
-                            <td><span class="status-badge success">Review Completed</span></td>
-                            <td><strong style="color:var(--primary-blue);">Move To Assessment</strong></td>
+                            
+                            <td><strong style="color:var(--primary-blue);">View Screening Result</strong></td>
                             <td style="text-align: right; padding-right: 20px;">
                                 <div style="display: flex; justify-content: flex-end; gap: 6px;">
-                                    <button class="btn-primary-action">Move Forward</button>
-                                    <button class="btn-primary-action" style="padding: 6px 10px; color: #64748b; background:#f1f5f9;">&#8942;</button>
+                                    <button class="btn-secondary" style="padding: 6px 12px; font-size: 12px; height: 32px; background: white; border: 1px solid #cbd5e1; border-radius: 4px; cursor: pointer;">Send Invite</button>
+                                    <button class="btn-primary-action">View Screening</button>
+                                    <button class="btn-primary-action"
+                                        style="padding: 6px 10px; color: #64748b; background:#f1f5f9;">&#8942;</button>
                                 </div>
                             </td>
                         </tr>
                     </tbody>
-                    
-                    <!-- Row 3 (Hold Example) -->
-                    <tbody class="candidate-row-group">
-                        <tr class="enterprise-row">
-                            <td style="text-align: center; vertical-align: middle;"><input type="checkbox"></td>
-                            <td>
-                                <div style="display: flex; align-items: center; gap: 10px;">
-                                    <div class="avatar-circle">CB</div>
-                                    <div><strong>Charles Babbage</strong></div>
-                                </div>
-                            </td>
-                            <td>Hardware Eng</td>
-                            <td>Video Screen</td>
-                            <td><div class="timestamp-txt" style="color:#1e293b;">05 Jun 2026</div></td>
-                            <td><span class="status-badge neutral" style="background:#f1f5f9; color:#475569; border: 1px solid #cbd5e1;">On Hold</span></td>
-                            <td><strong style="color:#475569;">Place On Hold</strong></td>
-                            <td style="text-align: right; padding-right: 20px;">
-                                <div style="display: flex; justify-content: flex-end; gap: 6px;">
-                                    <button class="btn-primary-action" style="color:#475569;">Manage Hold</button>
-                                    <button class="btn-primary-action" style="padding: 6px 10px; color: #64748b; background:#f1f5f9;">&#8942;</button>
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-
                     <!-- Row 4 -->
                     <tbody class="candidate-row-group">
                         <tr class="enterprise-row">
-                            <td style="text-align: center; vertical-align: middle;"><input type="checkbox"></td>
+                            
                             <td>
                                 <div style="display: flex; align-items: center; gap: 10px;">
                                     <div class="avatar-circle">AL</div>
@@ -452,23 +439,101 @@
                                 </div>
                             </td>
                             <td>Frontend Eng</td>
-                            <td>Video Screen</td>
-                            <td><div class="timestamp-txt" style="color:#64748b;">Not Submitted</div></td>
-                            <td><span class="status-badge danger" style="background:#fee2e2; color:#b91c1c;">Screening Expired</span></td>
+                            <td><div class="timestamp-txt" style="color:#64748b;">02 Jun 2026</div></td>
+                            <td>
+                                <div class="timestamp-txt" style="color:#64748b;">Not Submitted</div>
+                            </td>
+                            
                             <td><strong style="color:#b91c1c;">Send Reminder</strong></td>
                             <td style="text-align: right; padding-right: 20px;">
                                 <div style="display: flex; justify-content: flex-end; gap: 6px;">
+                                    <button class="btn-secondary" style="padding: 6px 12px; font-size: 12px; height: 32px; background: white; border: 1px solid #cbd5e1; border-radius: 4px; cursor: pointer;">Send Invite</button>
                                     <button class="btn-primary-action">Send Reminder</button>
-                                    <button class="btn-primary-action" style="padding: 6px 10px; color: #64748b; background:#f1f5f9;">&#8942;</button>
+                                    <button class="btn-primary-action"
+                                        style="padding: 6px 10px; color: #64748b; background:#f1f5f9;">&#8942;</button>
                                 </div>
                             </td>
                         </tr>
                     </tbody>
+                </table>
+            </div>
+
+            <div style="margin-top: 40px; margin-bottom: 12px;">
+                <h2 style="font-size: 16px; font-weight: 700; color: #0f172a; margin: 0;">Completed Queue</h2>
+                <p style="font-size: 13px; color: #64748b; margin-top: 4px; margin-bottom: 0;">Candidates who have been reviewed, rejected, or placed on hold.</p>
+            </div>
+            <div class="table-responsive-wrapper">
+                <table class="candidate-table enterprise-table" style="width: 100%;">
                     
+                    <thead>
+                        <tr>
+                            
+                            <th>Candidate</th>
+                            <th>Role</th>
+                            <th>Invited On</th>
+                            <th>Submitted On</th>
+                            <th>Recommended Action</th>
+                            <th style="text-align: right; padding-right: 20px;">Actions</th>
+                        </tr>
+                    </thead>
+                    <!-- Row 2 -->
+                    <tbody class="candidate-row-group">
+                        <tr class="enterprise-row">
+                            
+                            <td>
+                                <div style="display: flex; align-items: center; gap: 10px;">
+                                    <div class="avatar-circle">GH</div>
+                                    <div><strong>Grace Hopper</strong></div>
+                                </div>
+                            </td>
+                            <td>Full Stack</td>
+                            <td><div class="timestamp-txt" style="color:#64748b;">05 Jun 2026</div></td>
+                            <td>
+                                <div class="timestamp-txt" style="color:#1e293b;">07 Jun 2026</div>
+                            </td>
+                            
+                            <td><strong style="color:var(--primary-blue);">Move To Assessment</strong></td>
+                            <td style="text-align: right; padding-right: 20px;">
+                                <div style="display: flex; justify-content: flex-end; gap: 6px;">
+                                    <button class="btn-secondary" style="padding: 6px 12px; font-size: 12px; height: 32px; background: white; border: 1px solid #cbd5e1; border-radius: 4px; cursor: pointer;">Send Invite</button>
+                                    <button class="btn-primary-action">Move To Assessment</button>
+                                    <button class="btn-primary-action"
+                                        style="padding: 6px 10px; color: #64748b; background:#f1f5f9;">&#8942;</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <!-- Row 3 (Hold Example) -->
+                    <tbody class="candidate-row-group">
+                        <tr class="enterprise-row">
+                            
+                            <td>
+                                <div style="display: flex; align-items: center; gap: 10px;">
+                                    <div class="avatar-circle">CB</div>
+                                    <div><strong>Charles Babbage</strong></div>
+                                </div>
+                            </td>
+                            <td>Hardware Eng</td>
+                            <td><div class="timestamp-txt" style="color:#64748b;">02 Jun 2026</div></td>
+                            <td>
+                                <div class="timestamp-txt" style="color:#1e293b;">05 Jun 2026</div>
+                            </td>
+                            
+                            <td><strong style="color:#475569;">Keep On Hold</strong></td>
+                            <td style="text-align: right; padding-right: 20px;">
+                                <div style="display: flex; justify-content: flex-end; gap: 6px;">
+                                    <button class="btn-secondary" style="padding: 6px 12px; font-size: 12px; height: 32px; background: white; border: 1px solid #cbd5e1; border-radius: 4px; cursor: pointer;">Send Invite</button>
+                                    <button class="btn-primary-action" style="color:#475569;">Manage Hold</button>
+                                    <button class="btn-primary-action"
+                                        style="padding: 6px 10px; color: #64748b; background:#f1f5f9;">&#8942;</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
                     <!-- Row 5 (Reject Example) -->
                     <tbody class="candidate-row-group">
                         <tr class="enterprise-row">
-                            <td style="text-align: center; vertical-align: middle;"><input type="checkbox"></td>
+                            
                             <td>
                                 <div style="display: flex; align-items: center; gap: 10px;">
                                     <div class="avatar-circle">LT</div>
@@ -476,14 +541,19 @@
                                 </div>
                             </td>
                             <td>Backend Eng</td>
-                            <td>Video Screen</td>
-                            <td><div class="timestamp-txt" style="color:#1e293b;">01 Jun 2026</div></td>
-                            <td><span class="status-badge danger" style="background:#fee2e2; color:#b91c1c;">Review Completed</span></td>
+                            <td><div class="timestamp-txt" style="color:#64748b;">28 May 2026</div></td>
+                            <td>
+                                <div class="timestamp-txt" style="color:#1e293b;">01 Jun 2026</div>
+                            </td>
+                            
                             <td><strong style="color:#b91c1c;">Reject Candidate</strong></td>
                             <td style="text-align: right; padding-right: 20px;">
                                 <div style="display: flex; justify-content: flex-end; gap: 6px;">
-                                    <button class="btn-primary-action" style="color:#b91c1c; border-color:#fca5a5;">Reject</button>
-                                    <button class="btn-primary-action" style="padding: 6px 10px; color: #64748b; background:#f1f5f9;">&#8942;</button>
+                                    <button class="btn-secondary" style="padding: 6px 12px; font-size: 12px; height: 32px; background: white; border: 1px solid #cbd5e1; border-radius: 4px; cursor: pointer;">Send Invite</button>
+                                    <button class="btn-primary-action"
+                                        style="color:#b91c1c; border-color:#fca5a5;">Reject</button>
+                                    <button class="btn-primary-action"
+                                        style="padding: 6px 10px; color: #64748b; background:#f1f5f9;">&#8942;</button>
                                 </div>
                             </td>
                         </tr>
