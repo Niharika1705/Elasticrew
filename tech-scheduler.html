@@ -264,34 +264,84 @@
             <button class="add-filter-btn">+ Add Filter</button>
         </section>
 
-        <!-- Enterprise Data Grid (Tech Scheduler) -->
+                <!-- Enterprise Data Grid (Tech Scheduler) -->
         <section class="candidates-section">
+
+            <div style="margin-top: 30px; margin-bottom: 12px; padding-left: 24px;">
+                <h2 style="font-size: 16px; font-weight: 700; color: #0f172a; margin: 0; display: flex; align-items: center;">
+                    Tech. Interview Pending Queue <span style="background: #e2e8f0; color: #475569; padding: 2px 8px; border-radius: 12px; font-size: 12px; font-weight: 600; margin-left: 10px;">1</span>
+                </h2>
+                <p style="font-size: 13px; color: #64748b; margin-top: 4px; margin-bottom: 0;">Candidates Pending Technical Interview Scheduling</p>
+            </div>
             <div class="table-responsive-wrapper">
-                <table class="candidate-table enterprise-table" style="table-layout: fixed; width: 100%;">
+                <table class="candidate-table enterprise-table" style="width: 100%;">
                     <thead>
                         <tr>
-                            <th style="width: 40px; text-align: center;"><input type="checkbox"></th>
-                            <th style="width: 20%;">Candidate</th>
-                            <th style="width: 15%;">Role</th>
-                            <th style="width: 18%;">Assigned Panel</th>
-                            <th style="width: 15%;">Interview Status</th>
-                            <th style="width: 15%;">Feedback Status</th>
-                            <th style="width: 15%;">Next Action</th>
-                            <th style="width: 10%; text-align: right; padding-right: 20px;">Actions</th>
+                            <th style="width: 10%; white-space: nowrap; ">Candidate_ID</th>
+                            <th style="width: 20%; white-space: nowrap;">Candidate Name</th>
+                            <th style="width: 15%; white-space: nowrap;">Sub Department</th>
+                            <th style="width: 15%; white-space: nowrap; ">Interview Date & Time</th>
+                            <th style="width: 12%; white-space: nowrap; ">Candidate Status</th>
+                            <th style="width: 10%; white-space: nowrap; text-align: center; ">HR Notes</th>
+                            <th style="width: 18%; white-space: nowrap; text-align: right; ">Actions</th>
                         </tr>
                     </thead>
-                    
-                    <!-- Row 1 -->
                     <tbody class="candidate-row-group">
                         <tr class="enterprise-row">
-                            <td style="text-align: center; vertical-align: middle;"><input type="checkbox"></td>
+                            <td><span style="font-family: monospace; color: #64748b;">#C-1042</span></td>
                             <td>
                                 <div style="display: flex; align-items: center; gap: 10px;">
-                                    
-                                    <div>
-                                        <strong>Grace Hopper</strong>
-                                        
-                                    </div>
+                                    <div><strong>Alan Turing</strong></div>
+                                </div>
+                            </td>
+                            <td>Backend Eng</td>
+                            <td>
+                                <div class="timestamp-txt" style="color:#64748b;">-</div>
+                            </td>
+                            <td><span class="status-badge" style="background: #fef08a; color: #854d0e; padding: 4px 10px; border-radius: 12px; font-size: 12px; font-weight: 600;">Pending Scheduling</span></td>
+                            <td style="text-align: center;">
+                                <button onclick="openNotesModal('Alan Turing', this)" style="position: relative; width: 36px; height: 36px; border-radius: 8px; background: #f8fafc; border: 1px solid #e2e8f0; display: inline-flex; align-items: center; justify-content: center; cursor: pointer;">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                                </button>
+                            </td>
+                            <td style="text-align: right; ">
+                                <div style="display: flex; justify-content: flex-end;">
+                                    <button class="btn-primary-action" style="padding: 6px 12px; font-weight: 600; border: 1px solid var(--primary-blue); background: #f0f9ff; color: var(--primary-blue);">Book Slot</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div style="margin-top: 40px; margin-bottom: 12px; padding-left: 24px;">
+                <h2 style="font-size: 16px; font-weight: 700; color: #0f172a; margin: 0; display: flex; align-items: center;">
+                    Screening Completed Queue <span style="background: #e2e8f0; color: #475569; padding: 2px 8px; border-radius: 12px; font-size: 12px; font-weight: 600; margin-left: 10px;">2</span>
+                </h2>
+                <p style="font-size: 13px; color: #64748b; margin-top: 4px; margin-bottom: 0;">Candidates who have Completed Technical Interviews</p>
+            </div>
+            <div class="table-responsive-wrapper">
+                <table class="candidate-table enterprise-table" style="width: 100%;">
+                    <thead>
+                        <tr>
+                            <th style="width: 8%; white-space: nowrap; ">CANDIDATE_ID</th>
+                            <th style="width: 12%; white-space: nowrap;">NAME</th>
+                            <th style="width: 12%; white-space: nowrap;">SUB DEPARTMENT</th>
+                            <th style="width: 12%; white-space: nowrap; ">Assign Panelist</th>
+                            <th style="width: 10%; white-space: nowrap; ">Panelist Feedback</th>
+                            <th style="width: 10%; white-space: nowrap; ">Interview Date & Time</th>
+                            <th style="width: 10%; white-space: nowrap; ">CANDIDATE STATUS</th>
+                            <th style="width: 8%; white-space: nowrap; text-align: center; ">VIEW Recording</th>
+                            <th style="width: 8%; white-space: nowrap; text-align: center; ">HR NOTES</th>
+                            <th style="width: 10%; white-space: nowrap; text-align: right; ">ACTIONS</th>
+                        </tr>
+                    </thead>
+                    <tbody class="candidate-row-group">
+                        <tr class="enterprise-row">
+                            <td><span style="font-family: monospace; color: #64748b;">#C-1021</span></td>
+                            <td>
+                                <div style="display: flex; align-items: center; gap: 10px;">
+                                    <div><strong>Grace Hopper</strong></div>
                                 </div>
                             </td>
                             <td>Full Stack Eng</td>
@@ -299,52 +349,32 @@
                                 <strong>Gaurav Paliwal</strong><br>
                                 <span style="font-size:11px; color:#64748b;">Technical Lead</span>
                             </td>
-                            <td><span class="status-badge success">Completed</span></td>
-                            <td><span class="status-badge success">Submitted</span></td>
-                            <td><strong style="color:var(--primary-blue);">Advance Candidate</strong></td>
-                            <td style="text-align: right; padding-right: 20px;">
-                                <button class="btn-primary-action">Advance</button>
-                            </td>
-                        </tr>
-                        </tbody>
-
-                    <!-- Row 2 -->
-                    <tbody class="candidate-row-group">
-                        <tr class="enterprise-row">
-                            <td style="text-align: center; vertical-align: middle;"><input type="checkbox"></td>
+                            <td><span class="status-badge" style="background: #dcfce7; color: #15803d; padding: 4px 10px; border-radius: 12px; font-size: 12px; font-weight: 600;">Submitted</span></td>
                             <td>
-                                <div style="display: flex; align-items: center; gap: 10px;">
-                                    
-                                    <div>
-                                        <strong>Alan Turing</strong>
-                                        
-                                    </div>
+                                <div class="timestamp-txt" style="color:#0f172a; font-weight:500;">03 Jun 2026, 10:00 AM</div>
+                            </td>
+                            <td><span class="status-badge" style="background: #dcfce7; color: #15803d; padding: 4px 10px; border-radius: 12px; font-size: 12px; font-weight: 600;">Completed</span></td>
+                            <td style="text-align: center;">
+                                <button class="btn-primary-action" style="padding: 6px 12px; font-weight: 600; border: 1px solid var(--primary-blue); background: #f0f9ff; color: var(--primary-blue);">View Recording</button>
+                            </td>
+                            <td style="text-align: center;">
+                                <button onclick="openNotesModal('Grace Hopper', this)" style="position: relative; width: 36px; height: 36px; border-radius: 8px; background: #f8fafc; border: 1px solid #e2e8f0; display: inline-flex; align-items: center; justify-content: center; cursor: pointer;">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                                </button>
+                            </td>
+                            <td style="text-align: right; ">
+                                <div style="display: flex; justify-content: flex-end;">
+                                    <button class="btn-primary-action" style="padding: 6px 12px; font-weight: 600; border: 1px solid var(--primary-blue); background: var(--primary-blue); color: white;">Advance</button>
                                 </div>
                             </td>
-                            <td>Backend Eng</td>
-                            <td>
-                                <span style="color:#94a3b8; font-style:italic;">Unassigned</span>
-                            </td>
-                            <td><span class="status-badge pending">Pending Scheduling</span></td>
-                            <td><span class="status-badge neutral" style="background:#f1f5f9; color:#64748b;">N/A</span></td>
-                            <td><strong style="color:var(--primary-blue);">Assign Panel & Book</strong></td>
-                            <td style="text-align: right; padding-right: 20px;">
-                                <button class="btn-primary-action" style="background:#e0e7ff; border-color:#c7d2fe; color:var(--primary-blue);">Book Slot</button>
-                            </td>
                         </tr>
-                        </tbody>
-
-                    <!-- Row 3 -->
+                    </tbody>
                     <tbody class="candidate-row-group">
                         <tr class="enterprise-row">
-                            <td style="text-align: center; vertical-align: middle;"><input type="checkbox"></td>
+                            <td><span style="font-family: monospace; color: #64748b;">#C-1045</span></td>
                             <td>
                                 <div style="display: flex; align-items: center; gap: 10px;">
-                                    
-                                    <div>
-                                        <strong>Ada Lovelace</strong>
-                                        
-                                    </div>
+                                    <div><strong>Ada Lovelace</strong></div>
                                 </div>
                             </td>
                             <td>Frontend Eng</td>
@@ -352,14 +382,26 @@
                                 <strong>Ankit Mehta</strong><br>
                                 <span style="font-size:11px; color:#64748b;">Senior Engineer</span>
                             </td>
-                            <td><span class="status-badge success">Completed</span></td>
-                            <td><span class="status-badge warning" style="background:#fee2e2; color:#b91c1c;">Pending Feedback</span></td>
-                            <td><strong style="color:#b91c1c;">Follow Up Feedback</strong></td>
-                            <td style="text-align: right; padding-right: 20px;">
-                                <button class="btn-primary-action">Follow Up</button>
+                            <td><span class="status-badge" style="background: #fee2e2; color: #b91c1c; padding: 4px 10px; border-radius: 12px; font-size: 12px; font-weight: 600;">Pending Feedback</span></td>
+                            <td>
+                                <div class="timestamp-txt" style="color:#0f172a; font-weight:500;">02 Jun 2026, 2:00 PM</div>
+                            </td>
+                            <td><span class="status-badge" style="background: #dcfce7; color: #15803d; padding: 4px 10px; border-radius: 12px; font-size: 12px; font-weight: 600;">Completed</span></td>
+                            <td style="text-align: center;">
+                                <button class="btn-primary-action" style="padding: 6px 12px; font-weight: 600; border: 1px solid var(--primary-blue); background: #f0f9ff; color: var(--primary-blue);">View Recording</button>
+                            </td>
+                            <td style="text-align: center;">
+                                <button onclick="openNotesModal('Ada Lovelace', this)" style="position: relative; width: 36px; height: 36px; border-radius: 8px; background: #f8fafc; border: 1px solid #e2e8f0; display: inline-flex; align-items: center; justify-content: center; cursor: pointer;">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                                </button>
+                            </td>
+                            <td style="text-align: right; ">
+                                <div style="display: flex; justify-content: flex-end;">
+                                    <button class="btn-primary-action" style="padding: 6px 12px; font-weight: 600; border: 1px solid var(--primary-blue); background: #f8fafc; color: var(--primary-blue);">Follow Up</button>
+                                </div>
                             </td>
                         </tr>
-                        </tbody>
+                    </tbody>
                 </table>
             </div>
         </section>
