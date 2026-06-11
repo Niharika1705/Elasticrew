@@ -240,12 +240,34 @@
             border-color: #2563eb;
             outline: none;
         }
-    
-        .checkbox-dropdown-panel { border: 1px solid #cbd5e1; border-radius: 6px; max-height: 120px; overflow-y: auto; padding: 8px 12px; background-color: #ffffff; }
-        .checkbox-item { display: flex; align-items: center; gap: 8px; padding: 4px 0; font-size: 13px; color: #334155; cursor: pointer; }
-        .dropdown-wrapper:hover .dropdown-menu { display: block !important; }
-        .dropdown-menu a:hover { background-color: #f1f5f9; }
-</style>
+
+        .checkbox-dropdown-panel {
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            max-height: 120px;
+            overflow-y: auto;
+            padding: 8px 12px;
+            background-color: #ffffff;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 4px 0;
+            font-size: 13px;
+            color: #334155;
+            cursor: pointer;
+        }
+
+        .dropdown-wrapper:hover .dropdown-menu {
+            display: block !important;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: #f1f5f9;
+        }
+    </style>
 
     <style>
         .enterprise-table td strong {
@@ -253,11 +275,13 @@
             max-width: none !important;
             line-height: 1.3;
         }
+
         .enterprise-table td {
             vertical-align: middle !important;
             padding-top: 12px !important;
             padding-bottom: 12px !important;
         }
+
         .enterprise-table th:first-child,
         .enterprise-table td:first-child {
             padding-left: 24px !important;
@@ -329,7 +353,7 @@
                     qualified candidates forward.</p>
             </div>
             <div style="display:flex; align-items:center;">
-                
+
             </div>
         </header>
 
@@ -360,23 +384,28 @@
 
         <!-- Enterprise Data Grid -->
         <section class="candidates-section">
-            
+
             <div style="margin-top: 30px; margin-bottom: 12px; padding-left: 24px;">
-                <h2 style="font-size: 16px; font-weight: 700; color: #0f172a; margin: 0; display: flex; align-items: center;">Pending Action Queue <span style="background: #e2e8f0; color: #475569; padding: 2px 8px; border-radius: 12px; font-size: 12px; font-weight: 600; margin-left: 10px;">4</span></h2>
-                <p style="font-size: 13px; color: #64748b; margin-top: 4px; margin-bottom: 0;">Candidates awaiting your review or reminder.</p>
+                <h2
+                    style="font-size: 16px; font-weight: 700; color: #0f172a; margin: 0; display: flex; align-items: center;">
+                    Pending Action Queue <span
+                        style="background: #e2e8f0; color: #475569; padding: 2px 8px; border-radius: 12px; font-size: 12px; font-weight: 600; margin-left: 10px;">4</span>
+                </h2>
+                <p style="font-size: 13px; color: #64748b; margin-top: 4px; margin-bottom: 0;">Candidates awaiting your
+                    review or reminder.</p>
             </div>
-                                                <div class="table-responsive-wrapper">
+            <div class="table-responsive-wrapper">
                 <table class="candidate-table enterprise-table" style="width: 100%;">
-                    
+
                     <thead>
                         <tr>
-                            <th>Candidate_ID</th>
-                            <th>Name</th>
-                            <th>Sub Department</th>
-                            <th>Invite Date</th>
-                                                        <th>Status</th>
-                            <th style="text-align: center;">HR Notes</th>
-                            <th style="text-align: right; padding-right: 20px;">Actions</th>
+                            <th style="width: 12%;">Candidate_ID</th>
+                            <th style="width: 23%;">Name</th>
+                            <th style="width: 15%;">Sub Department</th>
+                            <th style="width: 15%;">Invite Date</th>
+                            <th style="width: 15%;">Status</th>
+                            <th style="text-align: center; width: 10%;">HR Notes</th>
+                            <th style="text-align: right; padding-right: 20px; width: 10%;">Actions</th>
                         </tr>
                     </thead>
                     <!-- Row 1 -->
@@ -389,23 +418,33 @@
                                 </div>
                             </td>
                             <td>Backend Eng</td>
-                            <td><div class="timestamp-txt" style="color:#64748b;">06 Jun 2026</div></td>
-                                                        <td><span class="status-badge" style="background: #fef08a; color: #854d0e; padding: 4px 10px; border-radius: 12px; font-size: 12px; font-weight: 600;">In Progress</span></td>
+                            <td>
+                                <div class="timestamp-txt" style="color:#64748b;">06 Jun 2026</div>
+                            </td>
+                            <td><span class="status-badge"
+                                    style="background: #fef08a; color: #854d0e; padding: 4px 10px; border-radius: 12px; font-size: 12px; font-weight: 600;">In
+                                    Progress</span></td>
                             <td style="text-align: center;">
-                                <button onclick="openNotesModal('Alan Turing', this)" style="position: relative; width: 36px; height: 36px; border-radius: 8px; background: #f8fafc; border: 1px solid #e2e8f0; display: inline-flex; align-items: center; justify-content: center; cursor: pointer;">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                                <button onclick="openNotesModal('Alan Turing', this)"
+                                    style="position: relative; width: 36px; height: 36px; border-radius: 8px; background: #f8fafc; border: 1px solid #e2e8f0; display: inline-flex; align-items: center; justify-content: center; cursor: pointer;">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#94a3b8"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                    </svg>
                                 </button>
                             </td>
                             <td style="text-align: right; padding-right: 20px;">
                                 <div style="display: flex; justify-content: flex-end;">
-                                <select class="filter-select" style=" padding: 6px 12px; font-size: 12px; border-radius: 6px; border: 1px solid #cbd5e1; background-color: #f8fafc;">
-                                    <option value="" disabled selected>Select Action</option>
-                                    <option value="mcq">Move to MCQ Assessment</option>
-                                    <option value="tech">Move to Tech Schedular</option>
-                                    <option value="hr">Move to HR interview</option>
-                                    <option value="review">Review Complete</option>
-                                </select>
-</div>
+                                    <select class="filter-select"
+                                        style=" padding: 6px 12px; font-size: 12px; border-radius: 6px; border: 1px solid #cbd5e1; background-color: #f8fafc;">
+                                        <option value="" disabled selected>Select Action</option>
+                                        <option value="mcq">Move to MCQ Assessment</option>
+                                        <option value="tech">Move to Tech Schedular</option>
+                                        <option value="hr">Move to HR interview</option>
+                                        <option value="hold">On Hold</option>
+                                        <option value="review">Review Complete</option>
+                                    </select>
+                                </div>
                             </td>
                         </tr>
                     </tbody>
@@ -419,23 +458,33 @@
                                 </div>
                             </td>
                             <td>Frontend Eng</td>
-                            <td><div class="timestamp-txt" style="color:#64748b;">02 Jun 2026</div></td>
-                                                        <td><span class="status-badge" style="background: #fee2e2; color: #b91c1c; padding: 4px 10px; border-radius: 12px; font-size: 12px; font-weight: 600;">Link Expired</span></td>
+                            <td>
+                                <div class="timestamp-txt" style="color:#64748b;">02 Jun 2026</div>
+                            </td>
+                            <td><span class="status-badge"
+                                    style="background: #fee2e2; color: #b91c1c; padding: 4px 10px; border-radius: 12px; font-size: 12px; font-weight: 600;">Link
+                                    Expired</span></td>
                             <td style="text-align: center;">
-                                <button onclick="openNotesModal('Ada Lovelace', this)" style="position: relative; width: 36px; height: 36px; border-radius: 8px; background: #f8fafc; border: 1px solid #e2e8f0; display: inline-flex; align-items: center; justify-content: center; cursor: pointer;">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                                <button onclick="openNotesModal('Ada Lovelace', this)"
+                                    style="position: relative; width: 36px; height: 36px; border-radius: 8px; background: #f8fafc; border: 1px solid #e2e8f0; display: inline-flex; align-items: center; justify-content: center; cursor: pointer;">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#94a3b8"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                    </svg>
                                 </button>
                             </td>
                             <td style="text-align: right; padding-right: 20px;">
                                 <div style="display: flex; justify-content: flex-end;">
-                                <select class="filter-select" style=" padding: 6px 12px; font-size: 12px; border-radius: 6px; border: 1px solid #cbd5e1; background-color: #f8fafc;">
-                                    <option value="" disabled selected>Select Action</option>
-                                    <option value="mcq">Move to MCQ Assessment</option>
-                                    <option value="tech">Move to Tech Schedular</option>
-                                    <option value="hr">Move to HR interview</option>
-                                    <option value="review">Review Complete</option>
-                                </select>
-</div>
+                                    <select class="filter-select"
+                                        style=" padding: 6px 12px; font-size: 12px; border-radius: 6px; border: 1px solid #cbd5e1; background-color: #f8fafc;">
+                                        <option value="" disabled selected>Select Action</option>
+                                        <option value="mcq">Move to MCQ Assessment</option>
+                                        <option value="tech">Move to Tech Schedular</option>
+                                        <option value="hr">Move to HR interview</option>
+                                        <option value="hold">On Hold</option>
+                                        <option value="review">Review Complete</option>
+                                    </select>
+                                </div>
                             </td>
                         </tr>
                     </tbody>
@@ -449,23 +498,33 @@
                                 </div>
                             </td>
                             <td>Systems Eng</td>
-                            <td><div class="timestamp-txt" style="color:#64748b;">11 Jun 2026</div></td>
-                                                        <td><span class="status-badge" style="background: #e0f2fe; color: #0369a1; padding: 4px 10px; border-radius: 12px; font-size: 12px; font-weight: 600;">Pending Screening</span></td>
+                            <td>
+                                <div class="timestamp-txt" style="color:#64748b;">11 Jun 2026</div>
+                            </td>
+                            <td><span class="status-badge"
+                                    style="background: #e0f2fe; color: #0369a1; padding: 4px 10px; border-radius: 12px; font-size: 12px; font-weight: 600;">Pending
+                                    Screening</span></td>
                             <td style="text-align: center;">
-                                <button onclick="openNotesModal('Margaret Hamilton', this)" style="position: relative; width: 36px; height: 36px; border-radius: 8px; background: #f8fafc; border: 1px solid #e2e8f0; display: inline-flex; align-items: center; justify-content: center; cursor: pointer;">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                                <button onclick="openNotesModal('Margaret Hamilton', this)"
+                                    style="position: relative; width: 36px; height: 36px; border-radius: 8px; background: #f8fafc; border: 1px solid #e2e8f0; display: inline-flex; align-items: center; justify-content: center; cursor: pointer;">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#94a3b8"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                    </svg>
                                 </button>
                             </td>
                             <td style="text-align: right; padding-right: 20px;">
                                 <div style="display: flex; justify-content: flex-end;">
-                                <select class="filter-select" style=" padding: 6px 12px; font-size: 12px; border-radius: 6px; border: 1px solid #cbd5e1; background-color: #f8fafc;">
-                                    <option value="" disabled selected>Select Action</option>
-                                    <option value="mcq">Move to MCQ Assessment</option>
-                                    <option value="tech">Move to Tech Schedular</option>
-                                    <option value="hr">Move to HR interview</option>
-                                    <option value="review">Review Complete</option>
-                                </select>
-</div>
+                                    <select class="filter-select"
+                                        style=" padding: 6px 12px; font-size: 12px; border-radius: 6px; border: 1px solid #cbd5e1; background-color: #f8fafc;">
+                                        <option value="" disabled selected>Select Action</option>
+                                        <option value="mcq">Move to MCQ Assessment</option>
+                                        <option value="tech">Move to Tech Schedular</option>
+                                        <option value="hr">Move to HR interview</option>
+                                        <option value="hold">On Hold</option>
+                                        <option value="review">Review Complete</option>
+                                    </select>
+                                </div>
                             </td>
                         </tr>
                     </tbody>
@@ -479,23 +538,33 @@
                                 </div>
                             </td>
                             <td>Data Science</td>
-                            <td><div class="timestamp-txt" style="color:#64748b;">09 Jun 2026</div></td>
-                                                        <td><span class="status-badge" style="background: #ffedd5; color: #c2410c; padding: 4px 10px; border-radius: 12px; font-size: 12px; font-weight: 600;">Could Not Complete</span></td>
+                            <td>
+                                <div class="timestamp-txt" style="color:#64748b;">09 Jun 2026</div>
+                            </td>
+                            <td><span class="status-badge"
+                                    style="background: #ffedd5; color: #c2410c; padding: 4px 10px; border-radius: 12px; font-size: 12px; font-weight: 600;">Could
+                                    Not Complete</span></td>
                             <td style="text-align: center;">
-                                <button onclick="openNotesModal('John von Neumann', this)" style="position: relative; width: 36px; height: 36px; border-radius: 8px; background: #f8fafc; border: 1px solid #e2e8f0; display: inline-flex; align-items: center; justify-content: center; cursor: pointer;">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                                <button onclick="openNotesModal('John von Neumann', this)"
+                                    style="position: relative; width: 36px; height: 36px; border-radius: 8px; background: #f8fafc; border: 1px solid #e2e8f0; display: inline-flex; align-items: center; justify-content: center; cursor: pointer;">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#94a3b8"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                    </svg>
                                 </button>
                             </td>
                             <td style="text-align: right; padding-right: 20px;">
                                 <div style="display: flex; justify-content: flex-end;">
-                                <select class="filter-select" style=" padding: 6px 12px; font-size: 12px; border-radius: 6px; border: 1px solid #cbd5e1; background-color: #f8fafc;">
-                                    <option value="" disabled selected>Select Action</option>
-                                    <option value="mcq">Move to MCQ Assessment</option>
-                                    <option value="tech">Move to Tech Schedular</option>
-                                    <option value="hr">Move to HR interview</option>
-                                    <option value="review">Review Complete</option>
-                                </select>
-</div>
+                                    <select class="filter-select"
+                                        style=" padding: 6px 12px; font-size: 12px; border-radius: 6px; border: 1px solid #cbd5e1; background-color: #f8fafc;">
+                                        <option value="" disabled selected>Select Action</option>
+                                        <option value="mcq">Move to MCQ Assessment</option>
+                                        <option value="tech">Move to Tech Schedular</option>
+                                        <option value="hr">Move to HR interview</option>
+                                        <option value="hold">On Hold</option>
+                                        <option value="review">Review Complete</option>
+                                    </select>
+                                </div>
                             </td>
                         </tr>
                     </tbody>
@@ -503,23 +572,28 @@
             </div>
 
             <div style="margin-top: 40px; margin-bottom: 12px; padding-left: 24px;">
-                <h2 style="font-size: 16px; font-weight: 700; color: #0f172a; margin: 0; display: flex; align-items: center;">Completed Queue <span style="background: #e2e8f0; color: #475569; padding: 2px 8px; border-radius: 12px; font-size: 12px; font-weight: 600; margin-left: 10px;">3</span></h2>
-                <p style="font-size: 13px; color: #64748b; margin-top: 4px; margin-bottom: 0;">Candidates who have been reviewed, rejected, or placed on hold.</p>
+                <h2
+                    style="font-size: 16px; font-weight: 700; color: #0f172a; margin: 0; display: flex; align-items: center;">
+                    Completed Queue <span
+                        style="background: #e2e8f0; color: #475569; padding: 2px 8px; border-radius: 12px; font-size: 12px; font-weight: 600; margin-left: 10px;">3</span>
+                </h2>
+                <p style="font-size: 13px; color: #64748b; margin-top: 4px; margin-bottom: 0;">Candidates who have been
+                    reviewed, rejected, or placed on hold.</p>
             </div>
             <div class="table-responsive-wrapper">
                 <table class="candidate-table enterprise-table" style="width: 100%;">
-                    
+
                     <thead>
                         <tr>
-                            <th>Candidate_ID</th>
-                            <th>Name</th>
-                            <th>Sub Department</th>
-                            <th>Invite Date</th>
-                            <th>Submitted On</th>
-                            <th>Status</th>
-                            <th style="text-align: center;">HR Notes</th>
-                            <th style="text-align: center;">View Screening</th>
-                            <th style="text-align: right; padding-right: 20px;">Actions</th>
+                            <th style="width: 10%;">Candidate_ID</th>
+                            <th style="width: 16%;">Name</th>
+                            <th style="width: 12%;">Sub Department</th>
+                            <th style="width: 12%;">Invite Date</th>
+                            <th style="width: 12%;">Submitted On</th>
+                            <th style="width: 14%;">Status</th>
+                            <th style="text-align: center; width: 8%;">HR Notes</th>
+                            <th style="text-align: center; width: 14%;">View Screening</th>
+                            <th style="text-align: right; padding-right: 20px; width: 12%;">Actions</th>
                         </tr>
                     </thead>
                     <!-- Row 1 -->
@@ -532,23 +606,37 @@
                                 </div>
                             </td>
                             <td>Engineering</td>
-                            <td><div class="timestamp-txt" style="color:#64748b;">01 Jun 2026</div></td>
-                            <td><div class="timestamp-txt" style="color:#0f172a; font-weight:500;">03 Jun 2026</div></td>
-                            <td><span class="status-badge" style="background: #e0f2fe; color: #0284c7; padding: 4px 10px; border-radius: 12px; font-size: 12px; font-weight: 600;">Pending HR Review</span></td>
+                            <td>
+                                <div class="timestamp-txt" style="color:#64748b;">01 Jun 2026</div>
+                            </td>
+                            <td>
+                                <div class="timestamp-txt" style="color:#0f172a; font-weight:500;">03 Jun 2026</div>
+                            </td>
+                            <td><span class="status-badge"
+                                    style="background: #e0f2fe; color: #0284c7; padding: 4px 10px; border-radius: 12px; font-size: 12px; font-weight: 600;">Pending
+                                    HR Review</span></td>
                             <td style="text-align: center;">
-                                <button onclick="openNotesModal('Grace Hopper', this)" style="position: relative; width: 36px; height: 36px; border-radius: 8px; background: #f8fafc; border: 1px solid #e2e8f0; display: inline-flex; align-items: center; justify-content: center; cursor: pointer;">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                                <button onclick="openNotesModal('Grace Hopper', this)"
+                                    style="position: relative; width: 36px; height: 36px; border-radius: 8px; background: #f8fafc; border: 1px solid #e2e8f0; display: inline-flex; align-items: center; justify-content: center; cursor: pointer;">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#94a3b8"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                    </svg>
                                 </button>
                             </td>
                             <td style="text-align: center;">
-                                <button class="btn-primary-action" style="padding: 6px 12px; font-weight: 600; border: 1px solid var(--primary-blue); background: #f0f9ff; color: var(--primary-blue);">View Screening</button>
+                                <button class="btn-primary-action"
+                                    style="padding: 6px 12px; font-weight: 600; border: 1px solid var(--primary-blue); background: #f0f9ff; color: var(--primary-blue);">View
+                                    Screening</button>
                             </td>
                             <td style="text-align: right; padding-right: 20px;">
-                                <select class="action-dropdown" style="padding: 6px 12px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 13px; color: #0f172a; cursor: pointer;">
+                                <select class="action-dropdown"
+                                    style="padding: 6px 12px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 13px; color: #0f172a; cursor: pointer;">
                                     <option value="" disabled selected>Actions...</option>
                                     <option value="mcq">Move to MCQ Assessment</option>
                                     <option value="tech">Move to Tech Schedular</option>
                                     <option value="hr">Move to HR interview</option>
+                                    <option value="hold">On Hold</option>
                                     <option value="complete">Review Complete</option>
                                 </select>
                             </td>
@@ -564,23 +652,37 @@
                                 </div>
                             </td>
                             <td>Hardware</td>
-                            <td><div class="timestamp-txt" style="color:#64748b;">28 May 2026</div></td>
-                            <td><div class="timestamp-txt" style="color:#0f172a; font-weight:500;">30 May 2026</div></td>
-                            <td><span class="status-badge" style="background: #dcfce7; color: #15803d; padding: 4px 10px; border-radius: 12px; font-size: 12px; font-weight: 600;">Complete HR Review</span></td>
+                            <td>
+                                <div class="timestamp-txt" style="color:#64748b;">28 May 2026</div>
+                            </td>
+                            <td>
+                                <div class="timestamp-txt" style="color:#0f172a; font-weight:500;">30 May 2026</div>
+                            </td>
+                            <td><span class="status-badge"
+                                    style="background: #dcfce7; color: #15803d; padding: 4px 10px; border-radius: 12px; font-size: 12px; font-weight: 600;">Complete
+                                    HR Review</span></td>
                             <td style="text-align: center;">
-                                <button onclick="openNotesModal('Charles Babbage', this)" style="position: relative; width: 36px; height: 36px; border-radius: 8px; background: #f8fafc; border: 1px solid #e2e8f0; display: inline-flex; align-items: center; justify-content: center; cursor: pointer;">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                                <button onclick="openNotesModal('Charles Babbage', this)"
+                                    style="position: relative; width: 36px; height: 36px; border-radius: 8px; background: #f8fafc; border: 1px solid #e2e8f0; display: inline-flex; align-items: center; justify-content: center; cursor: pointer;">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#94a3b8"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                    </svg>
                                 </button>
                             </td>
                             <td style="text-align: center;">
-                                <button class="btn-primary-action" style="padding: 6px 12px; font-weight: 600; border: 1px solid var(--primary-blue); background: #f0f9ff; color: var(--primary-blue);">View Screening</button>
+                                <button class="btn-primary-action"
+                                    style="padding: 6px 12px; font-weight: 600; border: 1px solid var(--primary-blue); background: #f0f9ff; color: var(--primary-blue);">View
+                                    Screening</button>
                             </td>
                             <td style="text-align: right; padding-right: 20px;">
-                                <select class="action-dropdown" style="padding: 6px 12px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 13px; color: #0f172a; cursor: pointer;">
+                                <select class="action-dropdown"
+                                    style="padding: 6px 12px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 13px; color: #0f172a; cursor: pointer;">
                                     <option value="" disabled selected>Actions...</option>
                                     <option value="mcq">Move to MCQ Assessment</option>
                                     <option value="tech">Move to Tech Schedular</option>
                                     <option value="hr">Move to HR interview</option>
+                                    <option value="hold">On Hold</option>
                                     <option value="complete">Review Complete</option>
                                 </select>
                             </td>
@@ -596,23 +698,37 @@
                                 </div>
                             </td>
                             <td>Product</td>
-                            <td><div class="timestamp-txt" style="color:#64748b;">25 May 2026</div></td>
-                            <td><div class="timestamp-txt" style="color:#0f172a; font-weight:500;">25 May 2026</div></td>
-                            <td><span class="status-badge" style="background: #e0f2fe; color: #0284c7; padding: 4px 10px; border-radius: 12px; font-size: 12px; font-weight: 600;">Pending HR Review</span></td>
+                            <td>
+                                <div class="timestamp-txt" style="color:#64748b;">25 May 2026</div>
+                            </td>
+                            <td>
+                                <div class="timestamp-txt" style="color:#0f172a; font-weight:500;">25 May 2026</div>
+                            </td>
+                            <td><span class="status-badge"
+                                    style="background: #e0f2fe; color: #0284c7; padding: 4px 10px; border-radius: 12px; font-size: 12px; font-weight: 600;">Pending
+                                    HR Review</span></td>
                             <td style="text-align: center;">
-                                <button onclick="openNotesModal('Linus Torvalds', this)" style="position: relative; width: 36px; height: 36px; border-radius: 8px; background: #f8fafc; border: 1px solid #e2e8f0; display: inline-flex; align-items: center; justify-content: center; cursor: pointer;">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                                <button onclick="openNotesModal('Linus Torvalds', this)"
+                                    style="position: relative; width: 36px; height: 36px; border-radius: 8px; background: #f8fafc; border: 1px solid #e2e8f0; display: inline-flex; align-items: center; justify-content: center; cursor: pointer;">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#94a3b8"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                    </svg>
                                 </button>
                             </td>
                             <td style="text-align: center;">
-                                <button class="btn-primary-action" style="padding: 6px 12px; font-weight: 600; border: 1px solid var(--primary-blue); background: #f0f9ff; color: var(--primary-blue);">View Screening</button>
+                                <button class="btn-primary-action"
+                                    style="padding: 6px 12px; font-weight: 600; border: 1px solid var(--primary-blue); background: #f0f9ff; color: var(--primary-blue);">View
+                                    Screening</button>
                             </td>
                             <td style="text-align: right; padding-right: 20px;">
-                                <select class="action-dropdown" style="padding: 6px 12px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 13px; color: #0f172a; cursor: pointer;">
+                                <select class="action-dropdown"
+                                    style="padding: 6px 12px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 13px; color: #0f172a; cursor: pointer;">
                                     <option value="" disabled selected>Actions...</option>
                                     <option value="mcq">Move to MCQ Assessment</option>
                                     <option value="tech">Move to Tech Schedular</option>
                                     <option value="hr">Move to HR interview</option>
+                                    <option value="hold">On Hold</option>
                                     <option value="complete">Review Complete</option>
                                 </select>
                             </td>
@@ -951,20 +1067,34 @@
     </script>
 
     <!-- HR Notes Modal -->
-    <div id="hrNotesModal" class="modal-overlay" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 23, 42, 0.5); z-index: 1000; align-items: center; justify-content: center;">
-        <div style="background: white; width: 400px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); overflow: hidden;">
-            <div style="padding: 16px 20px; border-bottom: 1px solid #e2e8f0; display: flex; justify-content: space-between; align-items: center;">
-                <h3 style="margin: 0; font-size: 16px; color: #0f172a; font-weight: 600;">HR Notes - <span id="notesCandidateName">Candidate</span></h3>
-                <button onclick="closeNotesModal()" style="background: none; border: none; cursor: pointer; color: #64748b;">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    <div id="hrNotesModal" class="modal-overlay"
+        style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 23, 42, 0.5); z-index: 1000; align-items: center; justify-content: center;">
+        <div
+            style="background: white; width: 400px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); overflow: hidden;">
+            <div
+                style="padding: 16px 20px; border-bottom: 1px solid #e2e8f0; display: flex; justify-content: space-between; align-items: center;">
+                <h3 style="margin: 0; font-size: 16px; color: #0f172a; font-weight: 600;">HR Notes - <span
+                        id="notesCandidateName">Candidate</span></h3>
+                <button onclick="closeNotesModal()"
+                    style="background: none; border: none; cursor: pointer; color: #64748b;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
                 </button>
             </div>
             <div style="padding: 20px;">
-                <textarea id="hrNotesTextarea" style="width: 100%; height: 120px; border: 1px solid #cbd5e1; border-radius: 8px; padding: 12px; font-family: inherit; font-size: 14px; resize: none; box-sizing: border-box;" placeholder="Add private HR notes here..."></textarea>
+                <textarea id="hrNotesTextarea"
+                    style="width: 100%; height: 120px; border: 1px solid #cbd5e1; border-radius: 8px; padding: 12px; font-family: inherit; font-size: 14px; resize: none; box-sizing: border-box;"
+                    placeholder="Add private HR notes here..."></textarea>
             </div>
-            <div style="padding: 16px 20px; background: #f8fafc; border-top: 1px solid #e2e8f0; display: flex; justify-content: flex-end; gap: 10px;">
-                <button onclick="closeNotesModal()" class="btn-secondary" style="padding: 8px 16px; border-radius: 6px; border: 1px solid #cbd5e1; background: white; cursor: pointer;">Cancel</button>
-                <button onclick="saveNotes()" class="btn-primary" style="padding: 8px 16px; border-radius: 6px; border: none; background: var(--primary-blue); color: white; font-weight: 600; cursor: pointer;">Save Notes</button>
+            <div
+                style="padding: 16px 20px; background: #f8fafc; border-top: 1px solid #e2e8f0; display: flex; justify-content: flex-end; gap: 10px;">
+                <button onclick="closeNotesModal()" class="btn-secondary"
+                    style="padding: 8px 16px; border-radius: 6px; border: 1px solid #cbd5e1; background: white; cursor: pointer;">Cancel</button>
+                <button onclick="saveNotes()" class="btn-primary"
+                    style="padding: 8px 16px; border-radius: 6px; border: none; background: var(--primary-blue); color: white; font-weight: 600; cursor: pointer;">Save
+                    Notes</button>
             </div>
         </div>
     </div>
@@ -975,10 +1105,10 @@
         function openNotesModal(candidateName, btnElement) {
             document.getElementById('notesCandidateName').innerText = candidateName;
             activeNoteBtn = btnElement;
-            
+
             const existingNote = btnElement.getAttribute('data-note') || '';
             document.getElementById('hrNotesTextarea').value = existingNote;
-            
+
             document.getElementById('hrNotesModal').classList.add('active');
         }
 
@@ -989,10 +1119,10 @@
 
         function saveNotes() {
             if (!activeNoteBtn) return;
-            
+
             const textarea = document.getElementById('hrNotesTextarea');
             const noteContent = textarea.value.trim();
-            
+
             if (noteContent.length > 0) {
                 activeNoteBtn.setAttribute('data-note', noteContent);
                 activeNoteBtn.style.background = '#0ea5e9';
@@ -1011,7 +1141,7 @@
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
                 `;
             }
-            
+
             closeNotesModal();
         }
     </script>

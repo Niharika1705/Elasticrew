@@ -272,6 +272,7 @@ body {
 }
 
 .candidate-table {
+    table-layout: fixed;
     width: 100%;
     border-collapse: collapse;
     text-align: left;
@@ -706,10 +707,7 @@ body {
 .table-responsive-wrapper { overflow-x: hidden !important; width: 100%; }
 
 .candidate-table select {
-    max-width: 130px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    max-width: 100%;
 }
 .candidate-table th {
     white-space: nowrap !important;
