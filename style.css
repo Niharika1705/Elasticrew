@@ -619,6 +619,8 @@ body {
 .kpi-card.success { border-left-color: #10b981; }
 .kpi-card.danger { border-left-color: #ef4444; }
 .kpi-card.neutral { border-left-color: #3b82f6; }
+.kpi-card.orange { border-left-color: #f97316; }
+.kpi-card.teal { border-left-color: #0ea5e9; }
 
 .kpi-label { font-size: 13px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; }
 .kpi-count { font-size: 28px; font-weight: 800; color: var(--text-dark); }
