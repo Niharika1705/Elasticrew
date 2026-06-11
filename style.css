@@ -730,3 +730,14 @@ body {
 .candidate-table td:last-child {
     padding-right: 32px !important;
 }
+
+.candidate-table th, .candidate-table td {
+    padding: 12px 10px;
+    white-space: nowrap !important;
+}
+.candidate-table th:first-child, .candidate-table td:first-child {
+    padding-left: 24px;
+}
+.candidate-table th:last-child, .candidate-table td:last-child {
+    padding-right: 40px !important; /* right side Padding increase */
+}
