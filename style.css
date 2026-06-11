@@ -296,6 +296,13 @@ body {
     font-size: 14px;
     vertical-align: middle;
     transition: background-color 0.2s ease;
+    white-space: nowrap;
+}
+
+.candidate-table th:last-child,
+.candidate-table td:last-child {
+    width: 1%;
+    white-space: nowrap;
 }
 
 .candidate-table tr.candidate-row:hover td {
