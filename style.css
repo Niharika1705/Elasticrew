@@ -272,7 +272,7 @@ body {
 }
 
 .candidate-table {
-    table-layout: fixed;
+    table-layout: auto;
     width: 100%;
     border-collapse: collapse;
     text-align: left;
@@ -298,9 +298,9 @@ body {
     vertical-align: middle;
     transition: background-color 0.2s ease;
     white-space: nowrap !important;
-    overflow: hidden !important;
-    text-overflow: ellipsis !important;
-    max-width: 250px;
+    overflow: visible !important;
+    
+    
 }
 
 .candidate-table th:last-child,
@@ -599,10 +599,16 @@ body {
 
 /* --- PHASE 1 ENTERPRISE UPGRADES --- */
 .kpi-panel-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
     gap: 16px;
     margin-bottom: 24px;
+    padding-bottom: 8px; /* For scrollbar if needed */
+}
+.kpi-card {
+    flex: 0 0 auto;
+    min-width: max-content;
 }
 
 .kpi-card {
@@ -706,7 +712,7 @@ body {
 .timeline-event { font-size: 13px; color: #334155; margin-bottom: 8px; position: relative; padding-left: 12px; border-left: 2px solid #e2e8f0; }
 .recommended-action-box { background: #e0e7ff; color: var(--primary-blue); padding: 14px 20px; border-radius: 8px; margin-top: 16px; font-size: 13.5px; border: 1px solid #c7d2fe; display: flex; align-items: center; gap: 8px;}
 
-.table-responsive-wrapper { overflow-x: hidden !important; width: 100%; }
+.table-responsive-wrapper { overflow-x: auto !important; width: 100%; }
 
 .candidate-table select {
     max-width: 100%;
